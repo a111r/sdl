@@ -1,0 +1,6 @@
+void it_horizontalDiagram(SDL_Renderer *render, vector<int>numbers)
+{
+    for (int i = 0; i < numbers.size(); i++){
+        it_horizontalLine(render, 500, 10 + 10*i, numbers[i]);
+    }
+}
