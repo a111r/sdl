@@ -1,0 +1,5 @@
+void it_verticalDiagram(SDL_Renderer *render, vector<int>numbers){
+
+    for (int i = 0; i < numbers.size(); i++){
+        it_verticalLine(render, 10 + 10*i, 500, numbers[i]);
+    }
