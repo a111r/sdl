@@ -1,4 +1,4 @@
-#include <SDL.h>]
+#include <SDL.h>
 #include <iostream>
 #include <cmath>
 #define WINDOW_SIZE 1000
@@ -46,11 +46,39 @@ int main(int argc, char* args[])
     SDL_RenderClear(renderer);
 
     SDL_SetRenderDrawColor(renderer, 255, 255, 255, 0);
-    line_DDA(250,250, 360,250,renderer);
+
+    line_DDA(100,100, 900,100,renderer);
+
+    line_DDA(900,100, 900,400,renderer);// kvadrat
+    line_DDA(900,400, 600 ,400,renderer);
+    line_DDA(600,400, 600,100,renderer);
+
+    line_DDA(100,100, 100,300,renderer);// pryamougol'nik
+    line_DDA(100,300, 600,300,renderer);
+
+    line_DDA(150,300, 150,350,renderer);// kvadrat1
+    line_DDA(150,350, 200,350,renderer);
+    line_DDA(200,350, 200,300,renderer);
+
+    line_DDA(550,300, 550,350,renderer);// kvadrat2
+    line_DDA(550,350, 500,350,renderer);
+    line_DDA(500,350, 550,350,renderer);
+    line_DDA(500,350, 500,300,renderer);
+
+    line_DDA(700,400, 700,500,renderer); //kvadrat3
+    line_DDA(700,500, 800,500,renderer);
+    line_DDA(800,500, 800,400,renderer);
+
+    line_DDA(275,150, 425,150,renderer);
+    line_DDA(425,150, 425,175,renderer);
+    line_DDA(425,175, 275,175,renderer);
+    line_DDA(275,175, 275,150,renderer);
+
     SDL_RenderPresent(renderer);
 
     SDL_RenderClear(renderer);
-    SDL_Delay(3000);
+    SDL_Delay(100000);
     SDL_Quit();
     return 0;
 }
+
